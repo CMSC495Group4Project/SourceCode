@@ -1,0 +1,123 @@
+//Nick Carter, Group 4
+//This is the save data class
+
+//Revision 1
+
+public class SaveData{
+
+string name;
+string email;
+string dob;
+string phone;
+string address;
+double starting_weight;
+double goal weight;
+double percent_veggies;
+double percent_protein;
+double daysperweek;
+double percentcardio;
+double percentstrength;
+double exercise_goal;
+double exercise_journal;
+double daily_weight;
+
+
+
+public SaveData(){
+Record record;
+
+}
+
+    //adds the four circumstances in which the savedata class is updated
+    public void updateButtonClicked(ActionEvent e){
+		updateRecord(record)
+	}
+	public void saveButtonClicked(ActionEvent e){
+		saveData(record)
+	}
+	public void disableButtonClicked(ActionEvent e){
+		disableAccount(record)
+	}
+	public void deleteButtonClicked(ActionEvent e){
+		deleteAccount(record)
+	}
+	
+	
+	//goes into the record class and updates the record
+	public void updateRecord(Record record){
+		record.setName(name)
+		record.setEmail(email)
+		record.setAddress(address)
+		record.setPhone(phone)
+		record.setDob(dob)
+		record.setStartWeight(weight)
+		record.setStartDiet(diet)
+		record.setStartExercise(exercise)
+	}
+	
+	
+	//saves all info to the record
+	 public void save(record){
+		ArrayList<Food> foodDiary
+		ArrayList<Exercise> exerciseDiary
+		dailyweight = weight
+
+		foodDiary.add(new Food(food))
+		exerciseDiary.add(new Exercise(exercise))
+
+		record.saveDailyWeight(dailyWeight)
+		record.saveFoodDiary(foodDiary)
+		record.saveExerciseDiary(exerciseDiary)
+
+	}
+	
+	
+	//creates save name method
+	public void saveName(String name){
+	name=this.name;
+	updateRecord(record);
+	}
+	
+	//creates save email method
+		public void saveEmail(String email){
+	email=this.email;
+	updateRecord(record);
+	}
+	
+	//creates save address method
+		public void saveAddress(String address){
+	address=this.address;
+	updateRecord(record);
+	}
+	
+	
+	//creates save phone method
+		public void savePhone(String phone){
+	name=this.name;
+	updateRecord(record);
+	}
+	
+	//creates save DOB method
+		public void saveDOB(String dob){
+	dob=this.dob;
+	updateRecord(record);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+}
